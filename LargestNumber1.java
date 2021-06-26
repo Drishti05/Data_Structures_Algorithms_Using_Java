@@ -16,7 +16,7 @@ public class LargestNumber1{
                 }
             }
         }
-        if(nums[0]==0) return largestNumber="0";
+        if(nums[0]==0) return largestNumber="0"; /*for the input array consisting of zeroes the expected output is "0" not "000000" */
         for(int index=0;index<nums.length;index++){
             largestNumber=largestNumber+Integer.toString(nums[index]);
         }
