@@ -1,13 +1,16 @@
+// This will prevent integer overflow
 import java.util.*;
 public class MissingNumber {
     public static int missingNumber(int[] nums) {
-        int actualSum=0;
+        int actualXOR=0;
         int size=nums.length;
-        int idealSum=(size*(size+1))/2;
-        for(int num:nums){
-            actualSum+=num;
+        int idealXOR=0;
+        for(int index=0;index<size;index++){
+            actualXOR^=nums[index];
+            idealXOR^=index;
         }
-        return idealSum-actualSum;
+        idealXOR^=size;
+        return actualXOR^idealXOR;
         
     }
     public static void main(String[] args) {
