@@ -1,6 +1,6 @@
 // This will prevent integer overflow
 import java.util.*;
-public class MissingNumber {
+public class MissingNumberBest {
     public static int missingNumber(int[] nums) {
         int actualXOR=0;
         int size=nums.length;
